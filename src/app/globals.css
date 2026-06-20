@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
+  --color-brand: #F79C6A;
+  --color-brand-hover: #E8893A;
+  --color-brand-muted: rgba(247, 156, 106, 0.12);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Light mode ─────────────────────────────────────────────────────── */
+:root {
+  /*
+   * Base is a warm mid-beige. The glow will create a dramatically
+   * brighter/whiter center — same contrast principle as the reference.
+   */
+  --background: #E6DDD4;
+  --foreground: #111111;
+  --surface: rgba(240, 234, 228, 0.70);
+  --surface-raised: rgba(255, 251, 248, 0.82);
+  --border: rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(255, 251, 248, 0.68);
+  --glass-border: rgba(247, 156, 106, 0.22);
+  /* Glow blob RGB in light mode — dark orange so blobs pop against light background */
+  --blob-rgb: 245, 108, 39;
+  --glow: none;
+}
+
+/* ── Dark mode ──────────────────────────────────────────────────────── */
+.dark {
+  --background: #0E0E0E;
+  --foreground: #F0EDEA;
+  --surface: rgba(28, 28, 28, 0.75);
+  --surface-raised: rgba(34, 34, 34, 0.80);
+  --border: rgba(255, 255, 255, 0.07);
+  --glass-bg: rgba(14, 14, 14, 0.62);
+  --glass-border: rgba(247, 156, 106, 0.22);
+  /* Glow blob RGB in dark mode — light orange visible on near-black background */
+  --blob-rgb: 247, 156, 106;
+  --glow: none;
+}
+
+/* ── Base reset ─────────────────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
+  background-image: var(--glow);
+  /* fixed keeps the blob stationary while content scrolls */
+  background-attachment: fixed;
+  background-size: cover;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+/* ── Utilities ──────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(247, 156, 106, 0.55);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(247, 156, 106, 0.22);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(247, 156, 106, 0.42); }
+
+::selection {
+  background: rgba(247, 156, 106, 0.22);
+  color: inherit;
+}
+
+textarea {
+  field-sizing: content;
+  min-height: 60px;
+  border: none;
+}
+
+/* Prevent any focus ring on textareas — parent container is the only visual boundary */
+textarea:focus,
+textarea:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
 }
