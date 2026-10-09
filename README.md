@@ -18,15 +18,13 @@
 
 ## 📸 Screenshots
 
-*(Visual assets are currently placeholders. The following screenshots would perfectly showcase the application.)*
-
-| Landing Page | Venue Proposal |
+| Landing Page | History Sidebar |
 |:---:|:---:|
-| <div align="center"><img src="https://placehold.co/600x400/1e1e2e/a6accd?text=Landing+Page+View" alt="Landing Page Placeholder" width="400"/></div> | <div align="center"><img src="https://placehold.co/600x400/1e1e2e/a6accd?text=AI+Venue+Proposal" alt="Venue Proposal Placeholder" width="400"/></div> |
-| *The hero section with dynamic Framer Motion animations and quick-prompt cards.* | *The AI-generated proposal card with one-click copy and breakdown.* |
-| **History Sidebar** | **Dark Mode** |
-| <div align="center"><img src="https://placehold.co/600x400/1e1e2e/a6accd?text=History+Sidebar" alt="History Sidebar Placeholder" width="400"/></div> | <div align="center"><img src="https://placehold.co/600x400/1e1e2e/a6accd?text=Dark+Mode+Theme" alt="Dark Mode Placeholder" width="400"/></div> |
-| *Slide-out sidebar containing previously generated and persisted proposals.* | *Native dark mode support utilizing `next-themes` and CSS variables.* |
+| <div align="center"><img src="docs/screenshots/landing-page.png" alt="Landing Page" width="400"/></div> | <div align="center"><img src="docs/screenshots/history-sidebar.png" alt="History Sidebar" width="400"/></div> |
+| *The hero section with dynamic Framer Motion animations and quick-prompt cards.* | *Slide-out sidebar containing previously generated and persisted proposals.* |
+| **Dark Mode** | **Venue Proposal (Not Pictured)** |
+| <div align="center"><img src="docs/screenshots/dark-mode.png" alt="Dark Mode" width="400"/></div> | *The AI Venue Proposal screenshot could not be captured locally because the environment lacks the configured API credentials required to generate a proposal.* |
+| *Native dark mode support utilizing `next-themes` and CSS variables.* | *When working, it shows an AI-generated proposal card with one-click copy and breakdown.* |
 
 ---
 
