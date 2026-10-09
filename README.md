@@ -18,13 +18,27 @@
 
 ## 📸 Screenshots
 
-| Landing Page | History Sidebar |
-|:---:|:---:|
-| <div align="center"><img src="docs/screenshots/landing-page.png" alt="Landing Page" width="400"/></div> | <div align="center"><img src="docs/screenshots/history-sidebar.png" alt="History Sidebar" width="400"/></div> |
-| *The hero section with dynamic Framer Motion animations and quick-prompt cards.* | *Slide-out sidebar containing previously generated and persisted proposals.* |
-| **Dark Mode** | **Venue Proposal (Not Pictured)** |
-| <div align="center"><img src="docs/screenshots/dark-mode.png" alt="Dark Mode" width="400"/></div> | *The AI Venue Proposal screenshot could not be captured locally because the environment lacks the configured API credentials required to generate a proposal.* |
-| *Native dark mode support utilizing `next-themes` and CSS variables.* | *When working, it shows an AI-generated proposal card with one-click copy and breakdown.* |
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <strong>Landing Page</strong><br/><br/>
+      <img src="docs/screenshots/landing-page.png" alt="Landing Page" width="100%"/><br/><br/>
+      <em>The hero section with dynamic Framer Motion animations and quick-prompt cards.</em>
+    </td>
+    <td width="50%" align="center">
+      <strong>History Sidebar</strong><br/><br/>
+      <img src="docs/screenshots/history-sidebar.png" alt="History Sidebar" width="100%"/><br/><br/>
+      <em>Slide-out sidebar containing previously generated and persisted proposals.</em>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <strong>Dark Mode</strong><br/><br/>
+      <img src="docs/screenshots/dark-mode.png" alt="Dark Mode" width="50%"/><br/><br/>
+      <em>Native dark mode support utilizing next-themes and CSS variables.</em>
+    </td>
+  </tr>
+</table>
 
 ---
 
